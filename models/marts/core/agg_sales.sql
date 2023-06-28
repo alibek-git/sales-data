@@ -33,3 +33,4 @@ WITH
 
 SELECT * 
 FROM final
+LIMIT 30000
