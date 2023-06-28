@@ -1,5 +1,6 @@
 SELECT
     salesperson,
+    SUM(CASE WHEN activity_type = 'Won' THEN 1 ELSE 0 END) AS total_won,
     ROUND(
         100.0 * SUM(CASE WHEN activity_type = 'Discovery call booked' THEN 1 ELSE 0 END)
         / NULLIF(SUM(CASE WHEN activity_type = 'Registration' THEN 1 ELSE 0 END), 0),
@@ -26,10 +27,10 @@ SELECT
 
     ROUND(
         100.0 * SUM(CASE WHEN activity_type = 'Won' THEN 1 ELSE 0 END)
-        / COUNT(*), 2
+        / NULLIF(SUM(CASE WHEN activity_type = 'Registration' THEN 1 ELSE 0 END), 0), 2
     ) AS total_conversion
 
 FROM
     {{ ref("agg_sales")}}
 GROUP BY
-    salesperson;
+    salesperson
