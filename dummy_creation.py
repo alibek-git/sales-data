@@ -74,7 +74,8 @@ def generate_dummy_data(min_leads, max_leads, salesperson_name, date_joined):
 
     return dummy_data
 
-# Generate 2000 dummy records
+# Generate between 1000 and 2000 dummy records for a Salesperson called Andy,who joined the company on 2020-05-17
+# Here provide your custom arguments
 dummy_records = generate_dummy_data(1000, 2000, "Andy", "2020-05-17 00:00:00")
 
 # Specify the output file path
