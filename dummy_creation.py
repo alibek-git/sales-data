@@ -1,4 +1,5 @@
 import csv
+import datetime
 import random
 from faker import Faker
 
@@ -12,16 +13,22 @@ activity_types = [
     'Won'
 ]
 
-def generate_dummy_data(num_records):
+def generate_dummy_data(min_leads, max_leads, salesperson_name, date_joined):
+    num_records = random.randint(min_leads, max_leads)
     dummy_data = []
+
+    # Parse date_joined argument to a datetime object
+    date_joined = datetime.datetime.strptime(date_joined, "%Y-%m-%d %H:%M:%S")
 
     # Generate Registration data
     for _ in range(num_records):
         registration_data = {
             'activity_type': 'Registration',
-            'timestamp': fake.date_time_this_year(),
+            'timestamp': fake.date_time_between(start_date=date_joined),
             'user_id': fake.random_number(digits=6),
-            'description': fake.sentence()
+            'description': fake.sentence(),
+            'salesperson': salesperson_name,
+            'date_joined': date_joined.strftime("%Y-%m-%d %H:%M:%S")
         }
         dummy_data.append(registration_data)
 
@@ -68,14 +75,14 @@ def generate_dummy_data(num_records):
     return dummy_data
 
 # Generate 2000 dummy records
-dummy_records = generate_dummy_data(2000)
+dummy_records = generate_dummy_data(1000, 2000, "Andy", "2020-05-17 00:00:00")
 
 # Specify the output file path
 output_file = 'dummy_records.csv'
 
 # Write the dummy records to a CSV file
 with open(output_file, 'w', newline='') as csvfile:
-    fieldnames = ['activity_type', 'timestamp', 'user_id', 'description']
+    fieldnames = ['activity_type', 'timestamp', 'user_id', 'description', 'salesperson', 'date_joined']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for record in dummy_records:
