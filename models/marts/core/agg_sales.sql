@@ -31,6 +31,6 @@ WITH
         SELECT * FROM stanley
     )
 
-SELECT * 
+SELECT *
 FROM final
 LIMIT 30000
