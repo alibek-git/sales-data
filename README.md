@@ -30,7 +30,7 @@ python dummy_generation.py
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+None
 
 ## Acknowledgments
 
