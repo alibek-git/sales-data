@@ -5,7 +5,7 @@ Models in the "staging" folder contain five models for five salespeople. Source 
 Aggregated model that combines all five models from the "staging" folder.
 
 # Models/marts/view_won.sql
-This model is used for building the Dashboard[https://lookerstudio.google.com/reporting/e34bf8c9-5712-4719-a831-8e538a0a4c98]. The table is grouped by Salesperson, and contains columns total_won (sum of all closed (won) deals by the salesperson), then columns that show the coversion rate between each step of the funnel (between Registration and Discovery Call Booked, between Discovery Call Booked and Discovery Call Completed etc.), and finally total conversion (Total Won divided by Total Registrations). In addition, the table has deals_closed_per_week column, which shows the number of deals a salesperson closes per week. Other column include days_with_company, total_leads_received, and average time (days) it takes a salesperson to close (Win) the deal.
+This model is used for building the [Dashboard](https://lookerstudio.google.com/reporting/e34bf8c9-5712-4719-a831-8e538a0a4c98). The table is grouped by Salesperson, and contains columns total_won (sum of all closed (won) deals by the salesperson), then columns that show the coversion rate between each step of the funnel (between Registration and Discovery Call Booked, between Discovery Call Booked and Discovery Call Completed etc.), and finally total conversion (Total Won divided by Total Registrations). In addition, the table has deals_closed_per_week column, which shows the number of deals a salesperson closes per week. Other column include days_with_company, total_leads_received, and average time (days) it takes a salesperson to close (Win) the deal.
 
 # Dummy Data Generation Script
 
