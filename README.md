@@ -1,5 +1,5 @@
 # Models/staging
-[Models](models) in the "staging" folder contain five models for five salespeople. Source files have 6 columns: activity_type, timestamp, user_id, description, salesperson, and date_joined. Models add two more columns to the table: (1) days_with_company (INT) - difference between current date and the date that the salesperson joined the company, and (2) time_diff_event_and_joined (INT) - difference between an event taking place and a timestamp of when a salesperson joined the company. 
+[Models](models/staging/stg_andy_model.sql) in the "staging" folder contain five models for five salespeople. Source files have 6 columns: activity_type, timestamp, user_id, description, salesperson, and date_joined. Models add two more columns to the table: (1) days_with_company (INT) - difference between current date and the date that the salesperson joined the company, and (2) time_diff_event_and_joined (INT) - difference between an event taking place and a timestamp of when a salesperson joined the company. 
 
 # Models/marts/core
 [Aggregated model](models/marts/core/agg_sales.sql) that combines all five models from the "staging" folder. On top of this view there is a [Sankey Diagram](https://lookerstudio.google.com/reporting/9875fcd4-ad36-45f5-82c3-6839b4de4dfa).
