@@ -1,5 +1,5 @@
 # 1. Purpose
-This repository was created as a part of the technical screening proccess for the Data Analyst position at [Improvado](improvado.io)
+This repository was created as a part of the technical screening proccess for the Data Analyst position at [Improvado](improvado.io).
 The goal of the assignemnt is to simulate a real-life analytics task while sticking to the principles of the [ActivitySchema](https://github.com/ActivitySchema/ActivitySchema.git). As a scenario it was chosen to simulate the activity of five salespeople of an assumed comapny, and to analyze their activity and efficiency.
 
 # 2. Plan
