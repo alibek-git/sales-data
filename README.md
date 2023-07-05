@@ -4,12 +4,12 @@ The goal of the assignemnt is to simulate a real-life analytics task while stick
 
 # 2. Plan
 This assignment was implemmented by following these steps:
-  a. Generate dummy data using Python script;
-  b. Upload the generated data into the Google Cloud Storage bucket;
-  c. Create datasets in BigQuery using data from GCS;
-  d. Use [dbt](cloud.dbt.com) as an IDE for creating models and queries;
-  e. Connect to a remote GitHub repository;
-  f. Use [Looker Studio](http://lookerstudio.google.com/) as visualization tool on top of the datasource that was generated.
+  \n a. Generate dummy data using Python script;
+  \n b. Upload the generated data into the Google Cloud Storage bucket;
+  \n c. Create datasets in BigQuery using data from GCS;
+  \n d. Use [dbt](cloud.dbt.com) as an IDE for creating models and queries;
+  \n e. Connect to a remote GitHub repository;
+  \n f. Use [Looker Studio](http://lookerstudio.google.com/) as visualization tool on top of the datasource that was generated.
 
 # 3. Structure of this repository
 ## 3.1 dummy_creation.py
