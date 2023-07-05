@@ -1,22 +1,23 @@
+-- returns aggregated table that joins all the tables from business models
 WITH 
     andy AS (
-        SELECT * FROM {{ ref("stg_andy_model")}}
+        SELECT * FROM {{ ref("bus_andy")}}
     ),
 
     dwight AS (
-        SELECT * FROM {{ ref("stg_dwight_model")}}
+        SELECT * FROM {{ ref("bus_dwight")}}
     ),
 
     jim AS (
-        SELECT * FROM {{ ref("stg_jim_model")}}
+        SELECT * FROM {{ ref("bus_jim")}}
     ),
 
     phyllis AS (
-        SELECT * FROM {{ ref("stg_phyllis_model")}}
+        SELECT * FROM {{ ref("bus_phyllis")}}
     ),
 
     stanley AS (
-        SELECT * FROM {{ ref("stg_stanley_model")}}
+        SELECT * FROM {{ ref("bus_stanley")}}
     ),
 
     final AS (
