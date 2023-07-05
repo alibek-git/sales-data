@@ -1,4 +1,2 @@
-SELECT *, 
-  EXTRACT(DAY FROM CURRENT_DATE - DATE(date_joined)) AS days_with_company,
-  TIMESTAMP_DIFF(timestamp, TIMESTAMP(date_joined), DAY) AS time_diff_event_and_joined
+SELECT * -- selecting all 6 columns, activity_type, timestamp, user_id, description, salesperson, and date_joined for the salesperson named Andy
 FROM `dbt_azhubekov.stg_andy_upd`
