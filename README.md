@@ -36,20 +36,20 @@ This is the aforementioned script that generates dummy data for a sales funnel s
   ### 3.1.5 The script will generate a CSV file named `dummy_records.csv` containing the generated dummy data.
 
 ## 3.2 seeds/
-The "seeds" directory contains dummy data that I generated for this particular assignment.
+The ["seeds" directory](seeds) contains dummy data that I generated for this particular assignment.
 
 ## 3.3 models/
-  ### 3.3.1 models/staging/
+  ### 3.3.1 [models/staging/](models/staging)
   Query to retireve all data from a datasource for every salesperon
 
   ### 3.3.2 models/business/
-  Transform the statging files and add two additional columns necessary for our analysis - days_with_company (calculates the number of days a salesperson has been with the company) and time_diff_event_and_joined (calcuates the number of days between when the event happening and when the salesperon joined the company).
+  [Model](models/business) to transform the statging files and add two additional columns necessary for our analysis - days_with_company (calculates the number of days a salesperson has been with the company) and time_diff_event_and_joined (calcuates the number of days between when the event happening and when the salesperon joined the company).
 
   ### 3.3.3 models/marts/core/agg_sales.sql
-  The aggregated model that combines the data for all five salespeople.
+  [The aggregated model](models/marts/core/agg_sales.sql) that combines the data for all five salespeople.
 
   ### 3.3.4 models/marts/dim_sales.sql
-  Dimension that aggregates data by salesperson and adds additional metrics to be used in the [Dashboard](https://lookerstudio.google.com/reporting/e34bf8c9-5712-4719-a831-8e538a0a4c98) and the [Sankey Diagram](https://lookerstudio.google.com/reporting/9875fcd4-ad36-45f5-82c3-6839b4de4dfa)
+  [Dimension](models/marts/dim_sales.sql) that aggregates data by salesperson and adds additional metrics to be used in the [Dashboard](https://lookerstudio.google.com/reporting/e34bf8c9-5712-4719-a831-8e538a0a4c98) and the [Sankey Diagram](https://lookerstudio.google.com/reporting/9875fcd4-ad36-45f5-82c3-6839b4de4dfa)
 
 # 4. Acknowledgments
 The dummy_creation.py script utilizes the [Faker](https://faker.readthedocs.io/) library for generating realistic fake data.
