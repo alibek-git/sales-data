@@ -42,6 +42,6 @@ SELECT
         ) AS avg_days_won -- How many days does it take for a salesperson to close (win) the deal
         
 FROM
-    {{ ref("agg_sales")}}
+    {{ ref("bus_sales_data")}}
 GROUP BY
     salesperson
